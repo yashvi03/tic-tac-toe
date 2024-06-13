@@ -1,0 +1,39 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+}
+
+.cell {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 5px;
+    width: 300px;
+    height: 300px;
+}
+
+.cell-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+    border: 1px solid #000;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.button {
+    margin-top: 20px;
+}
+
+#message {
+    margin-top: 20px;
+    font-size: 1.5rem;
+}
