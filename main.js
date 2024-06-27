@@ -1,11 +1,11 @@
 let board = ["", "", "", "", "", "", "", "", ""];
-let player = 1; // 1 for Player 1 (X), 0 for Player 2 (O)
+let player = 1; 
 
 const gameBoard = () => {
     for (let i = 0; i < board.length; i++) {
         let cell = document.getElementById(`cell-${i}`);
         if (cell) {
-            cell.innerText = ""; // Clear previous cell values for a new game
+            cell.innerText = ""; 
             cell.addEventListener('click', play);
         }
     }
@@ -34,7 +34,7 @@ const checkWinner = (board) => {
 };
 
 const nextTurn = () => {
-    player = 1 - player; // Toggle between 1 and 0
+    player = 1 - player; 
     return player === 1 ? "Player 1's Turn" : "Player 2's Turn";
 };
 
@@ -63,9 +63,7 @@ const disableBoard = () => {
     }
 };
 
-// Ensure the game starts with the button click
 document.querySelector("button").addEventListener('click', () => {
-    // Reset the board
     board = ["", "", "", "", "", "", "", "", ""];
     gameBoard();
 });
